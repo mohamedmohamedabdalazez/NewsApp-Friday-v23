@@ -1,0 +1,61 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="CSS Files/home.css">
+</head>
+<body>
+    <header>
+        <h1>Day News</h1>
+        <div class="logOut" style="float: right;">
+            <input type="button" id="logOutBtn" value="Log Out">
+        </div>
+
+        <div class="edit-btn">
+            <input type="button" value="Edit Interests" id="editBtn">
+        </div>
+
+        <div class="contact">
+            <div class="img"></div>
+            <div class="contact-message">
+                <p class = "UserName"></p>
+                <p class="close">x</p>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li Shortcut='home'><img src="Img\home_icon.webp" alt="Home Icon" style="width:16px; vertical-align:middle;"> Home</li>
+            <li Shortcut ='Egypt'>Egypt</li>
+            <li Shortcut ='Japan'>Japan</li>
+            <li Shortcut ='France'>France</li>
+            <li Shortcut ='Italy'>Italy</li>
+            <li Shortcut ='Canada'>Canada</li>
+            <li Shortcut ='America'>America</li>
+        </ul>
+    </nav>
+    <div class="search_bar">
+        <label for="DateFrom">Date From:</label>
+        <input type="date" id="DateFrom" name="DateFrom">
+       
+        <label for="search">Search:</label>
+        <input type="search" id="search" placeholder="Search for news...">
+        <button onclick="getNews(searchInput.value,dateFrom.value,dateTo.value)" type="submit" value="search">Search</button>
+    
+        <label for="DateTo">Date To:</label>
+        <input type="date" id="DateTo" name="DateTo">
+    </div>   
+    
+    <div class="container">
+        <div id="rowData" class="row">
+        </div>
+    </div>
+
+
+    <script src="JS Files/home.js" defer></script>
+</body>
+</html>
+
